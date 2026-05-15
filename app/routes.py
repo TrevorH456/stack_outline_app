@@ -70,3 +70,32 @@ def delete_trainer(trainer_id):
     return redirect(url_for("main.index"))
 
 
+
+@main.route("/edit_member/<int:member_id>", methods=["GET", "POST"])
+def edit_member(member_id):
+    member = Members.query.get_or_404(member_id)
+    if request.method == "POST":
+        member.first_name = request.form["first_name"]
+        member.last_name = request.form["last_name"]
+        member.email = request.form["email"]
+        member.membership_level = request.form["membership_level"]
+        db.session.commit()
+        return redirect(url_for("main.index"))
+    return render_template(
+        "edit_member.html",
+        member=member
+    )
+
+@main.route("/edit_trainer/<int:trainer_id>", methods=["GET", "POST"])
+def edit_trainer(trainer_id):
+    trainer = Trainers.query.get_or_404(trainer_id)
+    if request.method == "POST":
+        trainer.first_name = request.form["first_name"]
+        trainer.last_name = request.form["last_name"]
+        trainer.email = request.form["email"]
+        db.session.commit()
+        return redirect(url_for("main.index"))
+    return render_template(
+        "edit_trainer.html",
+        trainer=trainer
+    )

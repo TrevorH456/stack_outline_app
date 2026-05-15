@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block title %}Edit Trainer{% endblock %}
+
+{% block content %}
+
+<h1>Edit Trainer</h1>
+
+<form method="POST">
+
+    <div class="mb-3">
+
+        <label>First Name</label>
+
+        <input
+            type="text"
+            name="first_name"
+            class="form-control"
+            value="{{ trainer.first_name }}"
+            required
+        >
+
+    </div>
+
+    <div class="mb-3">
+
+        <label>Last Name</label>
+
+        <input
+            type="text"
+            name="last_name"
+            class="form-control"
+            value="{{ trainer.last_name }}"
+            required
+        >
+
+    </div>
+
+    <div class="mb-3">
+
+        <label>Email</label>
+
+        <input
+            type="email"
+            name="email"
+            class="form-control"
+            value="{{ trainer.email }}"
+            required
+        >
+
+    </div>
+
+    <button
+        type="submit"
+        class="btn btn-success"
+    >
+        Save Changes
+    </button>
+
+    <a
+        href="/"
+        class="btn btn-secondary"
+    >
+        Cancel
+    </a>
+
+</form>
+
+{% endblock %}

@@ -110,6 +110,7 @@
                 <td>{{ member.join_date }}</td>
                 <td>{{ member.created_date }}</td>
                 <td>
+                    <a href="/edit_member/{{ member.member_id }}" class="btn btn-warning btn-sm">Edit</a>
                     <a href="/delete_member/{{ member.member_id }}" class="btn btn-danger btn-sm">Delete</a>
                 </td>
             </tr>
@@ -210,6 +211,7 @@
                 <td>{{ trainer.join_date }}</td>
                 <td>{{ trainer.created_date }}</td>
                 <td>
+                    <a href="/edit_trainer/{{ trainer.trainer_id }}" class="btn btn-warning btn-sm">Edit</a>
                     <a href="/delete_trainer/{{ trainer.trainer_id }}" class="btn btn-danger btn-sm">Delete</a>
                 </td>
             </tr>
