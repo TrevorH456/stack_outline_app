@@ -7,11 +7,8 @@
 <h1>Edit Trainer</h1>
 
 <form method="POST">
-
     <div class="mb-3">
-
         <label>First Name</label>
-
         <input
             type="text"
             name="first_name"
@@ -19,13 +16,10 @@
             value="{{ trainer.first_name }}"
             required
         >
-
     </div>
 
     <div class="mb-3">
-
         <label>Last Name</label>
-
         <input
             type="text"
             name="last_name"
@@ -33,13 +27,10 @@
             value="{{ trainer.last_name }}"
             required
         >
-
     </div>
 
     <div class="mb-3">
-
         <label>Email</label>
-
         <input
             type="email"
             name="email"
@@ -47,23 +38,10 @@
             value="{{ trainer.email }}"
             required
         >
-
     </div>
 
-    <button
-        type="submit"
-        class="btn btn-success"
-    >
-        Save Changes
-    </button>
-
-    <a
-        href="/"
-        class="btn btn-secondary"
-    >
-        Cancel
-    </a>
-
+    <button type="submit" class="btn btn-success">Save Changes</button>
+    <a href="/" class="btn btn-secondary">Cancel</a>
 </form>
 
 {% endblock %}
