@@ -12,10 +12,20 @@ main = Blueprint("main", __name__)
 def index():
     members = Members.query.all()
     trainers = Trainers.query.all()
+    total_members = Members.query.count()
+    total_trainers = Trainers.query.count()
+    basic_members = Members.query.filter_by(membership_level="Basic").count()
+    pro_members = Members.query.filter_by(membership_level="Pro").count()
+    elite_members = Members.query.filter_by(membership_level="Elite").count()
     return render_template(
         "index.html",
         members=members,
-        trainers=trainers
+        trainers=trainers,
+        total_members=total_members,
+        total_trainers=total_trainers,
+        basic_members=basic_members,
+        pro_members=pro_members,
+        elite_members=elite_members     
     )
 
 @main.route("/add_member", methods=["POST"])
