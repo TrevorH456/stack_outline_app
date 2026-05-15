@@ -49,3 +49,10 @@ stack_outline_app/
 - SQLite is used out of the box via `DATABASE_URL=sqlite:///app.db`.
 - To switch databases, set `DATABASE_URL` (for example, PostgreSQL/MySQL URI) and install the corresponding driver.
 - Tables are auto-created at startup for this minimal starter (`db.create_all()`).
+
+## Instructions
+1. Load the website in the terminal using 'python run.py'.
+2. Access the given IP link to connect and view the website.
+3. You can add members or trainers by the existing entries on the home page part.
+4. You can edit or delete current members using the buttons on the right-hand side of existing data entries.
+5. Close the connection using CTRL + C on the terminal you used to open it.
